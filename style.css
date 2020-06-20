@@ -4,54 +4,229 @@
     box-sizing: border-box;
 }
 body{
-    font-size: 16px;
+    font-size: 10px;
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .section{
     display: flex;
-    margin: 0 30%;
 }
+
+/*Barre latéral*/
 
 .sidebar{
     background-color: rgb(254, 202, 7);
-    flex: 1;
+    flex: .5;
 }
+.contact p{
+    text-align: center;
+    margin: 20px  0;
+    color: rgb(74, 74, 74)
+}
+    .contact img{
+        border-radius: 50%;
+        height: 100px;
+        width: auto;
+    }
     .sidebar h2{
         background-color: rgb(64, 64, 64);
         color: rgb(254, 202, 7);
         text-transform: uppercase;
         text-align: center;
         font-weight: 700;
-        height: 1.5rem;
-        padding-top: 5px;
-        letter-spacing: 0.8px;
+        font-size: 11px;
+        height: 15px;
+        padding: 1px 3px 0;
+        letter-spacing: 0.4px;
+    }
+
+    .contact h2{
+        font-weight: normal;
     }
 
     .container{
-        padding: 20px;
-        font-size: 0.7rem;
+        padding: 6px;
+        font-size: 9px;
         text-align: justify;
+        color: rgb(74, 74, 74)
     }
-    .container ul{
-        margin: 10px  0;
+        .container ul{
+            margin: 5px  0;
+        }
+    .about{
+        color:gray;
+        height: 50%;
     }
+/*Page centrale*/
 
 
 .main{
-    padding: 0 30px;
     background-color: rgb(255, 255, 255);
     flex: 3;
 }
-
-    .main .topbar h1{
-        font-size: 2rem;
-        white-space: nowrap;
+    .topbar{
+        margin: 30px 10px;
     }
-   .article{
-       margin: 10px 0;
-       display: flex;
-       justify-content: space-between;
-       font-size: 0.7rem;
-   }
+        .topbar h1{
+            font-size: 18px;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+            .topbar h1 span{
+                color: rgb(254, 202, 7);
+            }
+        
+        .topbar h3{
+            font-weight: 700;
+            font-size: 11px;
+            color: rgb(74, 74, 74)
+        }
+        .topbar h3 span{
+            text-decoration: underline rgb(254, 202, 7);
+        }
+
+    .body{
+        margin: 0 10px;
+    }
+        .body h2{
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 11px;
+        padding: 5px;
+        }
+        .boxImg{
+                position: relative;
+                margin-top: 80px;
+                display: flex;
+                align-items: flex-end;  
+            }
+            .boxImg img{
+                    height: 15px;
+                    width: auto;
+                    margin: 0 5px 5px 0;
+                }
+                .boxImg::after{
+                    content: ' ';
+                    position: absolute;
+                    bottom: 0;
+                    display: block;
+                    height: 1px;
+                    width: 100%;
+                    background-color: rgb(254, 202, 7);
+                }
+
+            .article{
+                margin: 10px 0;
+                display: flex;
+                font-size: 9px;
+                color: rgb(74, 74, 74)
+            }
+                .paragraph{
+                    margin-left: 20px;
+                    color: gray;
+                }
+                    .paragraph h3{
+                        font-size: 10px;
+                        font-weight: 700;
+                        color: rgb(74, 74, 74)
+                    }
+                    .paragraph h3, .paragraph p{
+                        margin-bottom: 5px;
+                    }
+                    .paragraph li{
+                        list-style-type: disc;
+                    }
+                    
+
+@media only screen and (min-width: 500px){
+    .sidebar h2{
+        font-size: 16px;
+        height: 18px;
+    }
+
+    .container{
+        font-size: 11px;
+        padding: 12px;
+    }
+
+    .main .topbar{
+        margin: 30px 30px;
+    }
+        .main .topbar h1{
+            font-size: 30px;
+        }
+
+        .topbar h3{
+            font-size: 16px;
+        }
+
+        .body{
+            margin: 0 30px;
+        }
+            .body h2{
+                font-size: 16px;
+                padding: 10px;
+            }
+                .boxImg{
+                    margin-top: 70px;
+                }
+                    .boxImg img{
+                        height: 20px;
+                    }
+                .article{
+                    font-size: 11px;
+                }
+                    .paragraph{
+                        margin-left: 50px;
+                    }
+                        .paragraph h3{
+                            font-size: 13px;
+                        }
+    
+}
+
+@media only screen and (min-width: 800px){
+    .section{
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+    .contact img{
+        height: 120px;
+    }
+    .sidebar{
+        flex: 1;
+    }       
+        .sidebar h2{
+            height: 24px;
+            padding: 4px 3px 0;
+        }
+
+        .container{
+            font-size: 11px;
+        }
+            .container{
+                padding: 20px;
+            }
+                .container ul{
+                    margin: 10px  0;
+                }
+
+            .main .topbar h1{
+                font-size: 32px;
+            }
+                    .boxImg{
+                        margin-top: 90px;
+                    }
+                        .boxImg img{
+                            height: 20px;
+                        }
+                    .article{
+                        font-size: 11px;
+                    }
+                        .paragraph{
+                            margin-left: 115px;
+                        }
+}
+
